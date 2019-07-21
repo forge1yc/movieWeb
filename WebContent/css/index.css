@@ -1,0 +1,1014 @@
+*{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+	color:#555;
+}
+li{
+	list-style:none;
+}
+.cl{
+	clear:both;
+}
+body{
+	background:#F1F1EF;
+	/* background-image: url('https://i.loli.net/2019/07/21/5d333f358f63491692.jpg') no-repeat fixed top;  */
+	
+}
+/*顶部开始*/
+#top{
+	width:100%;
+	height:21px;
+	padding:5px 0px;
+	border-bottom:1px solid #ddd;
+}
+.top_main{
+	width:1010px;
+	height:21px;
+	padding:0px 15px;
+	line-height:21px;
+	margin:0 auto;
+}
+.top_main_left p{
+	color:#777790;
+	font-size:12px;
+	float:left;
+}
+.top_main_right_2{
+	float:right;
+	color:#777;
+	font-size:12px;
+}
+.top_main_right_1{
+	float:right;
+	color:#F00;
+	font-size:12px;
+	margin-left:10px;
+}
+.top_main_right a:hover{
+	text-decoration:underline;
+}
+/*header部分*/
+header{
+	width:1025px;
+	height:55px;
+	padding:20px 0px;
+	padding-left:15px;
+	margin:0 auto;
+}
+.logo{
+	width:210px;
+	height:50px;
+	float: left;
+	
+}
+.search{
+	width:327px;
+	height:50px;
+	margin-top:5px;
+	float:right;
+}
+input[type=search]{
+	width:241px;
+	height:34px;
+	padding:6px 12px;
+	border:1px solid #ccc;
+	margin-top:-1px;
+}
+input[type=submit]{
+	width:72px;
+	height:34px;
+	border:1px solid #2E6DA4;
+	padding:6px 12px;
+	margin-left:-4px;
+	margin-top:-6px;
+
+	background:#337AB7;
+	color:#fff;
+}
+input[type=submit]:hover{
+	background:#286090;
+}
+.tj{
+	margin-top:5px;
+	font-size:12px;
+}
+.tj a{
+	margin-right:5px;
+}
+.tj a:first-child{
+	margin-left:20px;
+}
+.tj a:hover{
+	text-decoration:underline;
+}
+/*导航开始*/
+nav{
+	width:100%;
+	height:40px;
+	margin-bottom:20px;
+	background:;
+}
+.nav{
+	width:1010px;
+	height:40px;
+	padding:0px 15px;
+	margin:0 auto;
+	background:;
+	overflow:hidden;
+
+}
+/*翻转导航开始*/
+.nav:after{
+	content:'';
+	display:block;
+	overflow:hidden;
+	clear:both;
+}
+.nav_item{
+	width:100px;
+	height:40px;
+	float:left;
+	/*3d元素距离视频的距离  定义后子元素会获取一个3d透视效果而不是元素的本身*/
+	perspective:4000px;
+	-webkit-perspective:4000px;
+	-moz-perspective:4000px;
+	-0-perspective:4000px;
+	-ms-perspective:4000px;
+}
+.nav_item a{
+	margin-right:5px;
+	height:40px;
+	display:block;
+	transition:all 500ms ease 0s;
+	-webkit-transform-style:preserve-3d;
+	-moz-transform-style:preserve-3d;
+	-0-transform-style:preserve-3d;
+	-ms-transform-style:preserve-3d;
+	/*.nav_item的子元素可以呈3d效果*/
+	transform-style:preserve-3d;
+}
+.nav_item a p{
+	height:40px;
+	line-height:40px;
+	margin:0;
+	border-radius:5px;
+	font-size:14px;
+	font-size:"黑体";
+	text-align:center;
+	transition:all 500ms ease 0s;
+}
+.nav_item a p:first-child{
+	border-radius:5px;
+	color:#fff;
+	background:#ff7434;
+	/*沿z轴移动50橡素   20px高度除以2*/
+	transform:translateZ(20px);
+	-webkit-transform:translateZ(20px);
+	-moz-transform:translateZ(20px);
+	-0-transform:translateZ(20px);
+	-ms-transform:translateZ(20px);
+}
+.nav_item a p:last-child{
+	border-radius:5px;
+	color:#fff;
+	background:#85bc00;
+	/*沿z轴移动50橡素  沿X轴旋转-90度  20px高度除以2*/
+	transform:translateZ(20px) rotateX(-90deg);
+	-webkit-transform:translateZ(20px) rotateX(-90deg);
+	-moz-transform:translateZ(20px) rotateX(-90deg);
+	-0-transform:translateZ(20px) rotateX(-90deg);
+	-ms-transform:translateZ(20px) rotateX(-90deg);
+	/*设置上边距为-20px  20px高度除以2*/
+	margin-top:-20px;
+}
+.nav_item a:hover{
+	margin-top:0px;
+	transform:rotateX(90deg);
+	-webkit-transform:rotateX(90deg);
+	-moz-transform:rotateX(90deg);
+	-0-transform:rotateX(90deg);
+	-ms-transform:rotateX(90deg);
+}
+.nav_item a:hover p:last-child{
+	margin-top:0px;
+	transform:translateZ(0) rotateX(-90deg);
+	-webkit-transform:translateZ(0) rotateX(-90deg);
+	-moz-transform:translateZ(0) rotateX(-90deg);
+	-0-transform:translateZ(0) rotateX(-90deg);
+	-ms-transform:translateZ(0) rotateX(-90deg);
+}
+.nav li{
+	width:100px;
+	height:40px;
+	background:#ff7434;
+	float:right;
+	margin-right:5px;
+	border-radius:5px;
+	line-height:40px;
+	text-align:center;
+	font-size:14px;
+}
+.nav li a{
+	color:#fff;
+}
+.nav li:hover a{
+	color:red;
+}
+/*公告*/
+.gg{
+	width:970px;
+	height:21px;
+	padding:5px 20px;
+	border:2px dashed #ccc;
+	border-radius:5px;
+	margin:0 auto;
+	color:#3c763d;
+	background:#dff0d8;
+	margin-bottom:10px;
+	
+}
+/*以后这里放轮播图*/
+/*轮播图开始*/
+.out {
+	width:1010px;
+	height:450px;
+	margin:0 auto;
+	border:1px solid transparent;
+	border-radius:10px;
+	margin-bottom:10px;
+	/* overflow: hidden; */
+	position: relative;
+}
+.hot{
+	width:150px;
+	height:150px;
+	position: absolute;
+	left:0;
+	top:0;
+	/* 这里放到最顶 */
+	z-index:99;
+}
+.out .img li {
+	position: absolute;
+	left:0;
+	top:0;
+	display: none;
+	/* overflow: hidden; */
+}
+.out .num {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	font-size:0px;
+	text-align:center;
+	width: 100%;
+}
+.out .num li {
+	width: 20px;
+	height: 20px;
+	line-height:20px;
+	border-radius:50%;
+	background:#666;
+	color: #fff;
+	text-align:center;
+	display: inline-block;
+	font-size:16px;
+	margin:0 3px;
+	/* 改变指针的形状 */
+	cursor: pointer;
+}
+.out .num li.active_lun {
+	background:#a00;
+}
+.out .btn {
+	position:absolute;
+	top: 50%;
+	margin-top:-30px;
+	width: 30px;
+	height: 60px;
+	line-height:60px;
+	background:rgba(0, 0, 0, 0.5);
+	font-size:40px;
+	color: #fff;
+	text-align:center;
+	display: none;
+}
+.out .left {
+	left: 0;
+}
+.out .right {
+	right: 0;
+}
+.out .right-btn{
+	width:10px;
+	height:60px;
+}
+.out:hover .btn {
+	display: block;
+	cursor: pointer;
+}
+
+/*11111111111111111111111*/
+.menu{
+	width:1030px;
+	height:162px;
+	margin:0 auto;
+	margin-bottom:15px;
+}
+.box-line{
+	width:50%;
+	margin:0 auto 15px;
+	font-size: 16px;
+	position: relative;
+	color: #777;
+	text-align:center;
+	/* 元素如果溢出框会怎么样 */
+	overflow: hidden;
+}
+.box-line span{
+	display: inline-block;
+	position:relative;
+	color:block;
+	font-weight:bold;
+}
+/* 这个大于号是选择所有复原素是box-line的元素 */
+.box-line>span:before, .box-line>span:after{
+	/* 这个是插入的内容 */
+	content:"";
+	position: relative;
+	top:50%;
+	position: absolute;
+	width:9999px;
+	height:1px;
+	background:#CCC;
+}
+.box-line>span:before{
+	right: 100%;
+	margin-right: 15px;
+}
+.box-line>span:after{
+	left: 100%;
+	margin-left: 15px;
+}
+.menu_item{
+	width:1030px;
+	height:162px;
+	padding:0px 5px;
+	
+	overflow:hidden;
+}
+.menu_item:after{
+	/* 这个是为了加空格 */
+	content:'';
+	display:block;
+	/* 这个是超出范围怎么办 */
+	overflow:hidden;
+	clear:both;
+}
+.menu_item_img{
+	overflow:hidden;
+	width:238px;
+	height:162px;
+	padding:0px 9px;
+	float:left;
+	/*3d元素距离视频的距离  定义后子元素会获取一个3d透视效果而不是元素的本身*/
+	perspective:4000px;
+	-webkit-perspective:4000px;
+	-moz-perspective:4000px;
+	-0-perspective:4000px;
+	-ms-perspective:4000px;
+}
+.menu_item_img a{
+	height:162px;
+	display:block;
+	transition:all 500ms ease 0s;
+	/*。item的子元素可以呈3d效果*/
+	transform-style:preserve-3d;
+	-webkit-transform-style:preserve-3d;
+	-moz-transform-style:preserve-3d;
+	-0-transform-style:preserve-3d;
+	-ms-transform-style:preserve-3d;
+}
+.menu_item_img a img{
+	width:238px;
+	height:162px;
+	transition:all 500ms ease 0s;
+}
+.menu_item_img a img:first-child{
+	
+	/*沿z轴移动81橡素  81px是高度除以2*/
+	transform:translateZ(81px);
+	-webkit-transform:translateZ(81px);
+	-moz-transform:translateZ(81px);
+	-0-transform:translateZ(81px);
+	-ms-transform:translateZ(81px);
+}
+/* 其实除了IE8 现在都是双冒号 */
+.menu_item_img a img:last-child{
+	
+	/*沿z轴移动81橡素  沿X轴旋转-90度 81px是高度除以2*/
+	transform:translateZ(81px) rotateX(-90deg);
+	-webkit-transform:translateZ(81px) rotateX(-90deg);
+	-moz-transform:translateZ(81px) rotateX(-90deg);
+	-0-transform:translateZ(81px) rotateX(-90deg);
+	-ms-transform:translateZ(81px) rotateX(-90deg);
+	/*设置上边距为-81px 81px是高度除以2*/
+	margin-top:-81px;
+}
+.menu_item_img a:hover{
+	margin-top:0px;
+	transform:rotateX(90deg);
+	-webkit-transform:rotateX(90deg);
+	-moz-transform:rotateX(90deg);
+	-0-transform:rotateX(90deg);
+	-ms-transform:rotateX(90deg);
+}
+.menu_item_img a:hover img:last-child{
+	margin-top:0px;
+	transform:translateZ(0) rotateX(-90deg);
+	-webkit-transform:translateZ(0) rotateX(-90deg);
+	-moz-transform:translateZ(0) rotateX(-90deg);
+	-0-transform:translateZ(0) rotateX(-90deg);
+	-ms-transform:translateZ(0) rotateX(-90deg);
+}
+.menu_item_img_title{
+	color:red;
+}
+/**/
+main{
+	width:1040px;
+	height:auto;
+	/* 像是这种就要写在大标题里面最好 */
+	overflow:hidden;
+	margin:0 auto;
+}
+.main{
+	width:760px;
+	height:784px;
+	float:left;
+}
+.main_title{
+	width:764px;
+	height:20px;
+	padding-left:10px;
+	border-left:4px solid #DD5862;
+	margin-top:20px;
+	margin-bottom:5px;
+	line-height:20px;
+}
+.main_title h3{
+	font-size:20px;
+	font-weight:400;
+	color:#666;
+	float:left;
+}
+/* 自己直接漂浮在最右边 */
+.main_title a{
+	font-size:14px;
+	color:#666;
+	float:right;
+}
+/* 加下划线 */
+.main_title a:hover{
+	text-decoration:underline;
+}
+.main_item{
+	width:175px;
+	height:302px;
+	padding:10px 7px;
+	float:left;
+}
+/* 这一大块都是链接元素 */
+.main_item_img{
+	display:block;
+	width:175px;
+	height:250px;
+	position:relative;
+}
+.main_item_img_tu{
+	width:175px;
+	height:250px;
+	opacity:0.8;
+}
+.main_item_title{
+	width:165px;
+	height:42px;
+	padding:5px;
+	background:#fff;
+}
+.main_item_title h1{
+	height:17px;
+	font-size: 14px;
+	   line-height: 17px;
+	   overflow: hidden;
+	width: 100%;
+	/* 字体粗细 */
+	font-weight: 500
+}
+.main_item_title h1 em{
+	color: #8c8c8c;
+	font-size: 12px;
+	font-style: normal;
+}
+.main_item_title_lei{
+	color: #7e7e7e;
+	font-size: 12px;
+	font-weight: normal;
+		height: 20px;
+		/* 设置行高 */
+		line-height: 20px;
+	   margin-top: 5px;
+	   overflow: hidden;
+	width: 100%
+}
+.movietype{
+	/* 家背景元素 */
+	background-color: rgb(230, 230, 230);
+	/* 圆角 */
+	border-radius: 2px;
+	color: #999;
+	/* 声明这个inline-blocd 才能够用margin
+	和 padding的上下 */
+	display: inline-block;
+	font-size: 12px;
+	line-height: 1.2;
+	margin: 0 5px 5px 0;
+	padding: 2px 5px;
+}
+/* 设置小播放图标 */
+.main_item_ico{
+	width:70px;
+	height:70px;
+	position:absolute;
+	top:85px;
+	left:50px;
+	display:none;
+}
+.cq{
+	/* 这里因为在图片里面所以必须用绝对定位 */
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	display:block;
+	width:35px;
+	height:20px;
+	/* 行高 */
+	line-height:20px;
+	text-align:center;
+	font-size:12px;
+	background:#337AB7;
+	color:#fff;
+}
+/* 只有放上去才触发，这和上面的是一起的
+要先设置不能显示 */
+.main_item:hover .main_item_ico{
+	display:block;
+}
+.main_item:hover .main_item_img_tu{
+	/* 这个是清晰度 
+	0 完全透明
+	1 完全不透明*/
+	/* 上面是0.8 */
+	opacity:1;
+}
+
+
+.main_item:hover{
+	/* 这个阴影效果有点差 */
+	box-shadow:8px 8px 20px 1px #c7bcbb4f;
+}
+.main_add{
+	width:760px;
+	height:90px;
+	background:red;
+	margin-top:15px;
+}
+/* 中间的硬盒广告 */
+.main_add{
+	text-align:center;
+	line-height:90px;
+}
+/* 右边的排行榜 */
+.right{
+	width:230px;
+	height:810px;
+	padding-left:10px;
+	padding-right:15px;
+	float:right;
+}
+.right_title{
+	width:216px;
+	height:20px;
+	padding-left:10px;
+	margin-top:20px;
+	margin-bottom:10px;
+	/* 这个就是右边的那个效果，非常神奇 */
+	border-left:4px solid #DD5862;
+}
+.right_title h3{
+	font-size:16px;
+	font-weight:400;
+	color:#666;
+	/* 行高 */
+	line-height:20px;
+
+}
+.list-group{
+	padding-left: 0;
+}
+.list-group-item{
+	width:220px;
+	height:21px;
+	color:#555;
+	border-top: 1px solid #ddd;
+	/* 这就是那条线 */
+	border-bottom: 1px solid #ddd;
+	display: block;
+	   margin-bottom: -1px;
+	   padding: 6px 5px;
+	position: relative;
+	font-size:14px;
+}
+.square-item-red{
+	background:red;
+	color: #fff;
+	   display: inline-block;
+	margin-right: 5px;
+	text-align: center;
+	width: 20px;
+	height:20px;
+	line-height:20px;
+}
+.square-item-blue{
+	background:#07A7E1;
+	color: #fff;
+	   display: inline-block;
+	margin-right: 5px;
+	text-align: center;
+	width: 20px;
+	height:20px;
+	line-height:20px;
+}
+.list-group-item:hover{
+	background:#ddd;
+}
+.right_title2{
+	margin-top:10px;
+	width:216px;
+	height:20px;
+	padding-left:10px;
+	margin-top:20px;
+	margin-bottom:10px;
+	/* 线 */
+	border-left:4px solid #DD5862;
+}
+.right_title2 h3{
+	font-size:18px;
+	font-weight:400;
+	color:#666;
+	line-height:20px;
+	/* 那条自动的下划线我还是没能找到 */
+}
+/*电视剧推荐*/
+.main2{
+	width:1030px;
+	height:290px;
+	padding:0px 15px;
+	margin:0 auto;
+	margin-top:20px;
+
+}
+.main2_title{
+	width:100%;
+	height:20px;
+	padding-left:10px;
+	border-left:4px solid #DD5862;
+	margin-top:20px;
+	margin-bottom:5px;
+	line-height:20px;
+	margin:10px -5px;
+}
+.main2_title h3{
+	font-size:20px;
+	font-weight:400;
+	color:#666;
+	float:left;
+}
+.main2_title a{
+	font-size:14px;
+	color:#666;
+	float:right;
+}
+.main2_title a:hover{
+	text-decoration:underline;
+}
+.main2_item{
+	width:186px;
+	height:265px;
+	padding:0px 10px;
+	float:left;
+	margin-top:0px; 
+	/* 300ms 拉伸300ms*/ 
+	transition:all 300ms ease 0s;
+}
+.main2_item_img{
+	width:186px;
+	height:265px;
+	position:relative;
+	overflow:hidden;
+}
+.main2_item_img img{
+	width:186px;
+	height:265px;
+}
+.main2_item_title{
+
+	width:176px;
+	height:0px;
+	overflow:hidden;
+	padding:5px 5px 5px 5px;
+	background:#fff;
+	position:absolute;
+	bottom:-10px;
+	/* 这是要弹出来的 */
+	transition:all 500ms ease 0s;
+}
+.main2_item_title h1{
+	height:17px;
+	font-size: 14px;
+	   line-height: 17px;
+	   overflow: hidden;
+	width: 100%;
+	font-weight: 500
+}
+.main2_item_title h1 em{
+	color: #8c8c8c;
+	font-size: 12px;
+	/* 正常的字体样式，不是斜体 */
+	font-style: normal;
+}
+/* 这里就是在炫技 */
+.main2_item_title_lei{
+	color: #7e7e7e;
+	font-size: 12px;
+	font-weight: normal;
+		height: 20px;
+		line-height: 20px;
+	   margin-top: 5px;
+	   overflow: hidden;
+	width: 100%
+}
+.movietype2{
+	background-color:red;
+	border-radius: 2px;
+	color: #fff;
+	display: inline-block;
+	font-size: 12px;
+	line-height: 1.2;
+	margin: 0 5px 5px 0;
+	padding: 2px 5px;
+}
+.gq{
+	position:absolute;
+	top:0px;
+	right:0px;
+	display:block;
+	width:35px;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+	font-size:12px;
+	background:#09C878;
+	color:#fff;
+}
+.main2_item:hover .main2_item_title{
+	/* 只是变化一点高度，就有神奇效果 */
+	/* 这个函数是只变化item——title */
+	/* 这是个选择器,后代选择器 */
+	height:62px;
+}
+.main2_add{
+	width:1010px;
+	height:20px;
+	background:#fff;
+	margin:20px auto;
+}
+.main2_item:hover{
+	/* 它只加阴影 */
+	margin-top:-5px;
+	box-shadow:10px 10px 20px 5px #e0e0e0;
+}
+/*电影推荐*/
+.main3{
+	width:1030px;
+	height:290px;
+	padding:0px 15px;
+	margin:0 auto;
+	margin-top:20px;
+
+}
+/* 这段也是炫技巧 */
+.main3_title{
+	width:100%;
+	height:20px;
+	padding-left:10px;
+	border-left:4px solid #DD5862;
+	margin-top:20px;
+	margin-bottom:5px;
+	line-height:20px;
+	margin:10px -5px;
+	overflow:hidden;
+	margin-bottom:20px;
+}
+.main3_title h3{
+	font-size:20px;
+	font-weight:400;
+	color:#666;
+	float:left;
+}
+/* 电影分类栏 */
+.main3_navbar{
+	float:left;
+	list-style-type: none;
+	font-size:17px;
+	font-weight: 300;
+	color:#666;
+	overflow: hidden;
+	text-decoration: none
+}
+.main3_navbar .active a {
+	background-color:rgb(107, 233, 155)
+
+}
+.main3_navbar li{
+	display:inline-block;
+	/* border-left:1px solid #666 */
+	margin:1px 6px;
+	text-decoration: none;
+	padding-left:22px;
+	padding-right:12px;
+	border-left:1px solid #666;
+}
+.main3_navbar li a{
+	display:inline-block;
+	color:#666;
+	text-align: center;
+	padding-top: 1px; 
+	text-decoration: none;
+}
+.main3_navbar li a:hover:not(.active){
+	background-color:rgb(107, 233, 155);
+}
+/* .main3_navbar .active{
+	background-color: #20c026
+}	  */
+
+#main3_a{
+	font-size:14px;
+	color:#666;
+	float:right;
+	text-decoration: none;
+}
+#main3_a:hover{
+	text-decoration:underline;
+	color: red;
+}
+.main3_item{
+	width:186px;
+	height:265px;
+	padding:0px 10px;
+	float:left;
+	margin-bottom:20px;
+}
+.main3_item_img{
+	width:186px;
+	height:265px;
+	position:relative;
+	overflow:hidden;
+}
+.main3_item_img img{
+	width:186px;
+	height:265px;
+	transform:scale(1,1);
+	transition:all 500ms ease 0s;
+}
+.main3_item_title{
+
+	width:176px;
+	height:42px;
+	overflow:hidden;
+	padding:5px 5px 5px 5px;
+	background:#fff;
+	position:absolute;
+	/* 技巧在这，左下角隐藏 */
+	left:-186px;
+	top:120px;
+	transition:all 500ms ease 0s;
+}
+.main3_item_title h1{
+	height:17px;
+	font-size: 14px;
+	   line-height: 17px;
+	   overflow: hidden;
+	width: 100%;
+	font-weight: 500
+}
+.main3_item_title h1 em{
+	color: #8c8c8c;
+	font-size: 12px;
+	font-style: normal;
+}
+.main3_item_title_lei{
+	color: #7e7e7e;
+	font-size: 12px;
+	font-weight: normal;
+		height: 20px;
+		line-height: 20px;
+	   margin-top: 5px;
+	   overflow: hidden;
+	width: 100%
+}
+.movietype3{
+	background-color:#FF7434;
+	border-radius: 2px;
+	color: #fff;
+	display: inline-block;
+	font-size: 12px;
+	line-height: 1.2;
+	margin: 0 5px 5px 0;
+	padding: 2px 5px;
+}
+.lg{
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	display:block;
+	width:35px;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+	font-size:12px;
+	background:red;
+	color:#fff;
+}
+.main3_item:hover .main3_item_title{
+	/* 位置回复成0 */
+	left:0px;
+	top:0px;
+}
+.genduo{
+	display:block;
+	line-height:20px;
+	text-align:center;
+	width:1010px;
+	height:20px;
+	/* 这个左右自动就可以了 */
+	padding:6px 0px;
+	border:1px solid #398439;
+	border-radius:5px;
+	background:#5CB85C;
+	margin:0 auto;
+	color:#fff;
+	font-size:14px;
+	margin-top:10px;
+	margin-bottom:30px;
+}
+.main3_item:hover{
+	box-shadow:10px 10px 20px 5px #e0e0e0;
+}
+.main3_item:hover .main3_item_img img{
+	/* 这里是图片的缩放效果 */
+	transform:scale(1.1,1.1);
+	-webkit-transform:scale(1.1,1.1);
+	-moz-transform:scale(1.1,1.1);
+	-o-transform:scale(1.1,1.1);
+	-ms-transform:scale(1.1,1.1);
+}
+/*底部开始*/
+/* 页脚 */
+footer{
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	/* 上面那条实线 */
+	border-top:1px solid #DDDDDD;
+	margin-bottom:20px;
+}
+.foot{
+	width:1040px;
+	height:120px;
+	padding-top:20px;
+	margin:0 auto;
+	color: #666;
+	font-size: 12px;
+	text-align: center;
+}
+.foot p{
+	margin-bottom:10px;
+}
+.foot a:hover{
+	text-decoration:underline;
+}
