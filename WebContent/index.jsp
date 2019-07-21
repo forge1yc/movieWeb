@@ -313,7 +313,7 @@
 			<div class="cl"></div>
 			<%-- 我改成 --%>
 			<div class="main_add">
-				<img src="./images/0069qWFHgw1f5a58ws5v6j30l402iq3x.jpg" alt="">
+				<img src="./images/advertising2.jpg" alt="">
 			</div>
 		</div>
 		<div class="right">

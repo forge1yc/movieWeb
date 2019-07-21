@@ -580,10 +580,10 @@ main{
 	/* 这个阴影效果有点差 */
 	box-shadow:8px 8px 20px 1px #c7bcbb4f;
 }
-.main_add{
+/* 这块神奇，我换不动 */
+.main_add img{
 	width:760px;
 	height:90px;
-	background:red;
 	margin-top:15px;
 }
 /* 中间的硬盒广告 */

@@ -64,9 +64,9 @@ body {
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="findfilms.hms">爱情电影<span
 								class="sr-only">(current)</span></a></li>
+						<li><a href="#">科幻电影</a></li>
 						<li><a href="#">动作电影</a></li>
-						<li><a href="#">动作电影</a></li>
-						<li><a href="#">动作电影</a></li>
+						<li><a href="#">动漫电影</a></li>
 					</ul>
 					<form class="navbar-form navbar-right" role="search">
 						<div class="form-group">
@@ -88,8 +88,8 @@ body {
 			</div>
 			<div style="margin: 0 auto; width: 950px;">
 				<div class="col-md-6">
-					<img style="opacity: 1; width: 160px; height: 220px;" title=""
-						class="medium" src="${film.mimage }">
+					<img style="opacity: 1; width: 160px; height: 220px; margin-left:150px;" title="${film.mname }${film.mtime }"
+						class="medium" src="${film.mimage }" alt="${film.mname }">
 				</div>
 
 				<div class="col-md-6">
