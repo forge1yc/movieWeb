@@ -24,7 +24,7 @@ public class FilmsDaoImpl implements FilmsDao {
 			ResultSet re = pr.executeQuery();
 			while(re.next()) {//此处while和if一样，因为唯一
 				film = new FilmDomain(); 
-				film.setActhor(re.getString("acthor"));
+				film.setActor(re.getString("actor"));
 				film.setCid(re.getInt("cid"));
 				film.setDirector(re.getString("director"));
 				film.setHot_flag(re.getInt("hot_flag"));
@@ -57,7 +57,7 @@ public class FilmsDaoImpl implements FilmsDao {
 		// TODO Auto-generated method stub
 		PageBean<FilmDomain> pb = new PageBean<FilmDomain>();
 		// 设定ps ，每页多少个
-		Integer ps = 12;
+		Integer ps = 5;
 		pb.setPs(ps);
 		// 查找tr
 		String sql = "select count(*) from film_info where cid =?";
@@ -82,7 +82,7 @@ public class FilmsDaoImpl implements FilmsDao {
 			FilmDomain film = null;
 			while (re.next()) {
 				film = new FilmDomain();
-				film.setActhor(re.getString("acthor"));
+				film.setActor(re.getString("actor"));
 				film.setCid(re.getInt("cid"));
 				film.setDirector(re.getString("director"));
 				film.setHot_flag(re.getInt("hot_flag"));

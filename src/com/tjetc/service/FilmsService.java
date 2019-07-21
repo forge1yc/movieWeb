@@ -1,8 +1,11 @@
 package com.tjetc.service;
 
+import java.sql.SQLException;
+
 import com.tjetc.daoImpl.FilmsDaoImpl;
 import com.tjetc.domain.FilmDomain;
 import com.tjetc.domain.PageBean;
+import com.tjetc.utils.DButils;
 
 public class FilmsService {
 	// 服务专门调用impl
@@ -36,6 +39,12 @@ public class FilmsService {
 			e.printStackTrace();
 		}
 		finally {
+			try {
+				DButils.getConnection().close();
+			} catch (SQLException e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}
 		//这里竟然空了	
 		}
 		return film;

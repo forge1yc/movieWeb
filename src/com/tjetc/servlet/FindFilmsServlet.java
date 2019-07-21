@@ -53,7 +53,7 @@ public class FindFilmsServlet  extends HttpServlet{
 		pb.setPc(pc);
 		request.setAttribute("pb", pb);
 
-		request.getRequestDispatcher("movies_list.jsp").forward(request, response);
+		request.getRequestDispatcher("movieList.jsp").forward(request, response);
 //		super.service(request, response);
 	}
 	

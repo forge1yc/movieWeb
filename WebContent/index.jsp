@@ -30,7 +30,7 @@
 	</div>
 	<header>
 		<div class="logo">
-			<h1><a href="index.jsp"><img src="images/logo2.png" alt="待定"></a></h1>
+			<h1><a href="index.jsp"><img src="images/logo2.png" alt="iMovie"></a></h1>
 		</div>
 		<div class="search">
 			<form action="" method="post">
@@ -127,26 +127,26 @@
 			<div class="menu_item_img">
 				<a href="#">
 					<img src="./images/0069qWFHgw1f899r65iarj30d707nwes.jpg" alt="狮子王">
-					<img src="./images/0069qWFHgw1f7iz0778hbj30d707n757.jpg" alt="图片">
+					<img src="./images/lion2_meitu_3.jpg" alt="狮子王">
 				</a>
 				<span class="menu_item_img_title">【1080P】<无间道-无间风云再起>第一季12集全</span>
 			</div>
 			<div class="menu_item_img">
 				<a href="#">
 					<img src="./images/0069qWFHgw1f899r65iarj30d707nwes.jpg" alt="图片">
-					<img src="./images/0069qWFHgw1f7iz0778hbj30d707n757.jpg" alt="图片">
+					<img src="./images/lion2_meitu_3.jpg" alt="狮子王">
 				</a>
 			</div>
 			<div class="menu_item_img">
 				<a href="#">
 					<img src="./images/0069qWFHgw1f899r65iarj30d707nwes.jpg" alt="图片">
-					<img src="./images/0069qWFHgw1f7iz0778hbj30d707n757.jpg" alt="图片">
+					<img src="./images/lion2_meitu_3.jpg" alt="狮子王">
 				</a>
 			</div>
 			<div class="menu_item_img">
 				<a href="#">
 					<img src="./images/0069qWFHgw1f899r65iarj30d707nwes.jpg" alt="图片">
-					<img src="./images/0069qWFHgw1f7iz0778hbj30d707n757.jpg" alt="图片">
+					<img src="./images/lion2_meitu_3.jpg" alt="狮子王">
 				</a>
 			</div>
 		</div>

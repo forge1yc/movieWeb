@@ -3,7 +3,7 @@ package com.tjetc.domain;
 public class FilmDomain {
 	private int mid;
 	private String mname;
-	private String acthor;
+	private String actor;
 	private String director;
 	private String mimage;
 	private String mdesc;
@@ -12,12 +12,12 @@ public class FilmDomain {
 	private int cid;
 	
 	
-	public FilmDomain(int mid, String mname, String acthor, String director, String mimage, String mdesc, Object mtime,
+	public FilmDomain(int mid, String mname, String actor, String director, String mimage, String mdesc, Object mtime,
 			int hot_flag, int cid) {
 		super();
 		this.mid = mid;
 		this.mname = mname;
-		this.acthor = acthor;
+		this.actor = actor;
 		this.director = director;
 		this.mimage = mimage;
 		this.mdesc = mdesc;
@@ -35,7 +35,7 @@ public class FilmDomain {
 
 	@Override
 	public String toString() {
-		return "Film [mid=" + mid + ", mname=" + mname + ", acthor=" + acthor + ", director=" + director + ", mimage="
+		return "Film [mid=" + mid + ", mname=" + mname + ", actor=" + actor + ", director=" + director + ", mimage="
 				+ mimage + ", mdesc=" + mdesc + ", mtime=" + mtime + ", hot_flag=" + hot_flag + ", cid=" + cid + "]";
 	}
 
@@ -60,13 +60,13 @@ public class FilmDomain {
 	}
 
 
-	public String getActhor() {
-		return acthor;
+	public String getActor() {
+		return actor;
 	}
 
 
-	public void setActhor(String acthor) {
-		this.acthor = acthor;
+	public void setActor(String actor) {
+		this.actor = actor;
 	}
 
 

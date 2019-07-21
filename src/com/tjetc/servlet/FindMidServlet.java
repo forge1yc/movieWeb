@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.tjetc.domain.FilmDomain;
 import com.tjetc.service.FilmsService;
 
-@WebServlet("/FindMid")
+@WebServlet("/findmid.hms")
 public class FindMidServlet extends HttpServlet{
 	/**
 	 * 
@@ -21,15 +21,17 @@ public class FindMidServlet extends HttpServlet{
 
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("utf-8");
 		// TODO Auto-generated method stub
-		super.service(request, response);
 		String mid = request.getParameter("mid");
 		//但是不接不行啊
 		//没有接mid 的值，mid是null 在null进行integer转型的
 		//话会报null指针异常
+//		FilmDomain film = service.findMid(Integer.valueOf(mid));
 		FilmDomain film = service.findMid(Integer.valueOf(mid));
 		request.setAttribute("film", film);
-		request.getRequestDispatcher("movies_info.jsp").forward(request, response);
+		request.getRequestDispatcher("movieInfo.jsp").forward(request, response);
 		
 	}
 	

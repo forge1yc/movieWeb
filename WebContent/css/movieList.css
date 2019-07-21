@@ -1,0 +1,50 @@
+*{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+	color:#555;
+}
+li{
+	list-style:none;
+}
+.cl{
+	clear:both;
+}
+body{
+	background:#F1F1EF;
+	/* background-image: url('https://i.loli.net/2019/07/21/5d333f358f63491692.jpg') no-repeat fixed top;  */
+	
+}
+
+
+.pagination{
+    margin:20px auto;
+}
+
+/*底部开始*/
+/* 页脚 */
+footer{
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	/* 上面那条实线 */
+	border-top:1px solid #DDDDDD;
+	margin-bottom:20px;
+}
+.foot{
+	width:1040px;
+	height:120px;
+	padding-top:20px;
+	margin:0 auto;
+	color: #666;
+	font-size: 12px;
+	text-align: center;
+}
+.foot p{
+	margin-bottom:10px;
+}
+.foot a:hover{
+	text-decoration:underline;
+}
