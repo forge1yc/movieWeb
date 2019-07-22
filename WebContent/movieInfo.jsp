@@ -23,7 +23,6 @@ body {
 	margin: 0 auto;
 	width: 1030px;
 }
-
 </style>
 <body>
 	<script type="text/javascript" color="255,0,0" opacity='0.7'
@@ -39,8 +38,16 @@ body {
 		</div>
 		<div class="col-md-3" style="padding-top: 20px">
 			<ol class="list-inline">
-				<li><a href="login.hms">登录</a></li>
-				<li><a href="login.hms">注册</a></li>
+				<c:choose>
+					<c:when test="${!empty(user) }">
+						<li><a href="user.jsp">个人中心</a></li>
+						<li><a href="quit.hms">注销</a></li>
+					</c:when>
+					<c:otherwise>
+						<li><a href="login.jsp">登录</a></li>
+						<li><a href="register.jsp">注册</a></li>
+					</c:otherwise>
+				</c:choose>
 			</ol>
 		</div>
 	</div>
@@ -88,8 +95,10 @@ body {
 			</div>
 			<div style="margin: 0 auto; width: 950px;">
 				<div class="col-md-6">
-					<img style="opacity: 1; width: 160px; height: 220px; margin-left:150px;" title="${film.mname }${film.mtime }"
-						class="medium" src="${film.mimage }" alt="${film.mname }">
+					<img
+						style="opacity: 1; width: 160px; height: 220px; margin-left: 150px;"
+						title="${film.mname }${film.mtime }" class="medium"
+						src="${film.mimage }" alt="${film.mname }">
 				</div>
 
 				<div class="col-md-6">

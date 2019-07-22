@@ -42,8 +42,16 @@ body {
 		</div>
 		<div class="col-md-3" style="padding-top: 20px">
 			<ol class="list-inline">
-				<li><a href="login.hms">登录</a></li>
-				<li><a href="login.hms">注册</a></li>
+			<c:choose>
+				<c:when test="${!empty(user) }">
+					<li><a href="user.jsp">个人中心</a></li>
+					<li><a href="quit.hms">注销</a></li>
+				</c:when>
+				<c:otherwise>
+					<li><a href="login.jsp">登录</a></li>
+					<li><a href="register.jsp">注册</a></li>
+				</c:otherwise>
+			</c:choose>
 				<!--  <li><a href="login.hms">购物车</a></li>-->
 
 			</ol>
