@@ -29,6 +29,31 @@ public class FilmsService {
 		
 	}
 
+	public FilmDomain findName(String name) {
+		FilmDomain film = null;
+		try {
+		film = daoImpl.findName(name);
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		finally {
+			try {
+				DButils.getConnection().close();
+			} catch (SQLException e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}
+		//这里竟然空了	
+		}
+		return film;
+	}
+	/**
+	 *	通过id找电影 
+	 * @param mid
+	 * @return
+	 */
 	public FilmDomain findMid(int mid) {
 		FilmDomain film = null;
 		try {
@@ -50,3 +75,4 @@ public class FilmsService {
 		return film;
 	}
 }
+	

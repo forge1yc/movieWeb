@@ -36,6 +36,14 @@ body{
 	font-size:12px;
 	float:left;
 }
+
+.top_main_center p{
+	color:#777790;
+	font-size:12px;
+	float:left;
+	margin-left: 100px;
+
+}
 .top_main_right_2{
 	float:right;
 	color:#777;

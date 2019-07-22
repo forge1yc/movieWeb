@@ -15,7 +15,7 @@
 
 <link rel="stylesheet" href="./css/index.css">
 </head>
-<body>
+<body onload="displaytime()">
 	<%-- 一个非常赞的网页渲染工具 --%>
 	<script type="text/javascript" color="255,0,0" opacity='0.7'
 		zIndex="-2" count="200" src="./js/canvas-nest.js"></script>
@@ -24,9 +24,17 @@
 			<div class="top_main_left">
 				<p>欢迎来到iMovie，一起分享电影给我们带来的快乐。</p>
 			</div>
+			<div class="top_main_center">
+				<p id="top_main_time"></p>
+			</div>
 			<div class="top_main_right">
-				<a class="top_main_right_1" href="">保存到桌面</a> <a
-					class="top_main_right_2" href="">Ctrl+D 加入收藏夹</a>
+				<a class="top_main_right_1" href="">保存到桌面</a>
+				<c:if test="${ !empty(user)}">
+					<a class="top_main_right_2" href="">hello:${user.userName }</a>
+				</c:if>
+				<c:if test="${empty(user) }">
+					<a class="top_main_right_2" href="login.jsp">请登录</a>
+				</c:if>
 			</div>
 		</div>
 	</div>
@@ -37,7 +45,7 @@
 			</h1>
 		</div>
 		<div class="search">
-			<form action="" method="post">
+			<form action="findname.hms" method="post">
 				<input type="search" name="search" placeholder="请输入电影名字"> <input
 					type="submit" name="anniu" value="搜索">
 			</form>

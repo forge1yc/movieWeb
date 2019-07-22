@@ -14,16 +14,16 @@ import com.tjetc.utils.DButils;
 public class FilmsDaoImpl implements FilmsDao {
 
 	@Override
-	public FilmDomain findMid(int mid) {
+	public FilmDomain findName(String name) {
 		// TODO Auto-generated method stub
-		String sql = "select * from film_info where mid =  ?";
+		String sql = "select * from film_info where mname =  ?";
 		FilmDomain film = null;
 		try {
 			PreparedStatement pr = DButils.getConnection().prepareStatement(sql);
-			pr.setInt(1, mid);
+			pr.setString(1, name);
 			ResultSet re = pr.executeQuery();
-			while(re.next()) {//此处while和if一样，因为唯一
-				film = new FilmDomain(); 
+			while (re.next()) {// 此处while和if一样，因为唯一
+				film = new FilmDomain();
 				film.setActor(re.getString("actor"));
 				film.setCid(re.getInt("cid"));
 				film.setDirector(re.getString("director"));
@@ -33,14 +33,13 @@ public class FilmsDaoImpl implements FilmsDao {
 				film.setMimage(re.getString("mimage"));
 				film.setMname(re.getString("mname"));
 				film.setMtime(re.getString("mtime"));
-				
+
 			}
 
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
-		}
-		finally {
+		} finally {
 			try {
 				DButils.getConnection().close();
 			} catch (SQLException e) {
@@ -53,7 +52,45 @@ public class FilmsDaoImpl implements FilmsDao {
 	}
 
 	@Override
-	public PageBean<FilmDomain> findFilmPage(int pc, int cid) {//比如直接找第五页
+	public FilmDomain findMid(int mid) {
+		// TODO Auto-generated method stub
+		String sql = "select * from film_info where mid =  ?";
+		FilmDomain film = null;
+		try {
+			PreparedStatement pr = DButils.getConnection().prepareStatement(sql);
+			pr.setInt(1, mid);
+			ResultSet re = pr.executeQuery();
+			while (re.next()) {// 此处while和if一样，因为唯一
+				film = new FilmDomain();
+				film.setActor(re.getString("actor"));
+				film.setCid(re.getInt("cid"));
+				film.setDirector(re.getString("director"));
+				film.setHot_flag(re.getInt("hot_flag"));
+				film.setMdesc(re.getString("mdesc"));
+				film.setMid(re.getInt("mid"));
+				film.setMimage(re.getString("mimage"));
+				film.setMname(re.getString("mname"));
+				film.setMtime(re.getString("mtime"));
+
+			}
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			try {
+				DButils.getConnection().close();
+			} catch (SQLException e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}
+
+		}
+		return film;
+	}
+
+	@Override
+	public PageBean<FilmDomain> findFilmPage(int pc, int cid) {// 比如直接找第五页
 		// TODO Auto-generated method stub
 		PageBean<FilmDomain> pb = new PageBean<FilmDomain>();
 		// 设定ps ，每页多少个
@@ -64,19 +101,18 @@ public class FilmsDaoImpl implements FilmsDao {
 		try {
 			PreparedStatement pr = DButils.getConnection().prepareStatement(sql);
 			pr.setInt(1, cid);
-			ResultSet re = pr.executeQuery(); 
-			if(re.next()) {
+			ResultSet re = pr.executeQuery();
+			if (re.next()) {
 				pb.setTr(re.getInt(1));
 
-			}
-			else {
+			} else {
 				pb.setTr(0);
 			}
-			sql = "select * from film_info where cid = ? limit ?,? ";//3 6 从第三条开始往后读六条
+			sql = "select * from film_info where cid = ? limit ?,? ";// 3 6 从第三条开始往后读六条
 			pr = DButils.getConnection().prepareStatement(sql);
-			pr. setInt(1,cid); //cid是classid
-			pr.setInt(2, ps*(pc -1 )); //ps一页显示多少个，pc当前页
-			pr.setInt(3, ps); 
+			pr.setInt(1, cid); // cid是classid
+			pr.setInt(2, ps * (pc - 1)); // ps一页显示多少个，pc当前页
+			pr.setInt(3, ps);
 			re = pr.executeQuery();
 			List<FilmDomain> films = new ArrayList<FilmDomain>();
 			FilmDomain film = null;
@@ -94,15 +130,11 @@ public class FilmsDaoImpl implements FilmsDao {
 				films.add(film);
 			}
 			pb.setListbeans(films);
-			
-			
-			
 
-			
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
-		}finally {
+		} finally {
 			try {
 				DButils.getConnection().close();
 			} catch (SQLException e) {

@@ -18,4 +18,12 @@ public interface FilmsDao {
 	 * @return
 	 */
 	public FilmDomain findMid( int mid);
+
+	/**
+	 *	通过名字找到电影 
+	 * @param name
+	 * @return
+	 */
+	
+	public FilmDomain findName(String name);
 }
